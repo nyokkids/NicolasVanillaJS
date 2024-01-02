@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <title>Momentum</title>
   </head>
-  <body>
+  <body class="wrapperofall">
     <form class="hidden" id="login-form">
       <input
+        class="input"
         required
         maxlength="15"
         type="text"
@@ -17,10 +18,16 @@
       />
       <input type="submit" value="Log In" />
     </form>
-    <h2 id="clock">00:00</h2>
+    <div id="clock" class="clock"></div>
     <h1 id="greeting" class="hidden"></h1>
     <form id="todo-form">
-      <input type="text" placeholder="Write a To Do and Press Enter" required />
+      To Do
+      <input
+        type="text"
+        placeholder="Write a To Do and Press Enter"
+        required
+        class="placeholder"
+      />
     </form>
     <ul id="todo-list"></ul>
     <div id="quote" class="quotesWrapper">
@@ -28,8 +35,8 @@
       <span class="author"></span>
     </div>
     <div id="weather">
-      <span></span>
-      <span></span>
+      <span class="location"></span>
+      <span class="temperature"></span>
     </div>
     <!-- <a href="https://nomadcoders.co">Go to courses</a> -->
     <!-- <img src="img/03.jpeg" /> -->

@@ -1,12 +1,51 @@
 .hidden {
   display: none;
 }
+.wrapperofall {
+  display: flex;
+  /* width: calc(100%); */
+  padding: 24px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  box-sizing: border-box; /* Include padding and borders in the total width */
+  /* display: flex;
+  padding: 52px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px; */
+}
+.login-form {
+  display: flex;
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9);
+}
+/* .input {
+} */
+.clock {
+  /* width: 100%; */
+  align-self: stretch;
+  display: flex;
+  padding: 8px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  font-size: 12vw;
+  font-family: "Pretendard";
+  font-weight: 600;
+  color: #3c4048;
+  line-height: 150%;
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9);
+}
 .quotesWrapper {
   display: flex;
   flex-direction: column;
   background-color: #f8f9fa;
   border-radius: 16px;
-  padding: 20px;
+  padding: 24px;
   gap: 16px;
 }
 .quote {
@@ -15,16 +54,154 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  background-color: beige;
 }
+
 .author {
   font-family: "montserrat";
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  background-color: aqua;
+}
+#todo-form {
+  display: flex;
+  color: var(--Text-Secondary, #3c4048);
+  /* KR/Subhead/01_SemiBold */
+  font-family: Pretendard;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+.placeholder {
+  display: flex;
+  padding: 8px 14px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  align-self: stretch;
+
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9);
+
+  color: var(--Text-Primary, #1a1e27);
+  /* KR/Subhead/02_SemiBold */
+  font-family: Pretendard;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 142.857% */
 }
 #todo-list {
-  background-color: aquamarine;
-  height: 48px;
+  display: flex;
+  padding: 24px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+
+  /* display: flex;
+  padding: 24px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch; */
+
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9);
+}
+.parent {
+  width: auto;
+  background-color: red;
+  border-width: 2px;
+  border-color: black;
+}
+.parent2 {
+  background-color: yellow;
+  border-width: 2px;
+  border-color: black;
+}
+#todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+}
+
+.todo-item:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.todo-text {
+  flex-grow: 1;
+}
+
+.delete-button {
+  background-color: #ff6666;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+#weather {
+  display: flex;
+  padding: 24px 24px;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9);
+  font-family: Pretendard;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px; /* 150% */
+}
+/* .location {
+} */
+/* .temperature { */
+/* display: flex;
+  padding: 24px 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: var(--BG-Placeholder, #f7f8f9); */
+/* } */
+@media only screen and (max-width: 1000px) {
+  .quotesWrapper {
+    padding: 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Adjust gap for smaller screens */
+  }
+
+  .quote {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    line-height: 18px; /* Adjust line height for smaller screens */
+  }
+
+  .author {
+    font-size: 12px; /* Adjust font size for smaller screens */
+    line-height: 16px; /* Adjust line height for smaller screens */
+  }
 }

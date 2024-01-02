@@ -22,12 +22,27 @@ function paintToDo(newTodo) {
   lists.id = newTodo.id;
   const spann = document.createElement("span");
   const btn = document.createElement("button");
-  btn.innerText = "❌";
+  btn.innerHTML = "&#10006;";
   btn.addEventListener("click", deleteToDo);
   lists.appendChild(spann);
   lists.appendChild(btn);
+  lists.style.display = "flex";
+  lists.style.width = "max-content";
+  lists.style.padding = "16px";
+  lists.style.justifyContent = "center";
+  lists.style.alignItems = "center";
+  lists.style.gap = "8px";
   spann.innerText = newTodo.text;
   toDoList.appendChild(lists);
+  btn.style.backgroundColor = "#BCC0C6"; // Set button background color
+  btn.style.width = "24px";
+  btn.style.height = "24px";
+  btn.style.justifyContent = "center";
+  btn.style.alignItems = "center";
+  btn.style.color = "#fff"; // Set button text color
+  btn.style.border = "none"; // Remove button border
+  btn.style.paddingTop = "3px"; // Set button padding
+  btn.style.cursor = "pointer"; // Set cursor style
 }
 
 function handdleToDoSubmit(event) {
